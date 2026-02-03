@@ -1,13 +1,9 @@
-// Firebase configuration and initialization
-// Replace these with your actual Firebase project credentials
-
+// Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// Your web app's Firebase configuration
-// TODO: Replace with your own Firebase config from Firebase Console
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyDTCsoK06xwBfNF9qrrXKmm9AMEaFChvqs",
   authDomain: "lius-541af.firebaseapp.com",
@@ -20,10 +16,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-
-// Export the app for use in other modules
 export default app;
