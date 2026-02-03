@@ -33,23 +33,12 @@
             
             <nav class="sidebar-nav">
                 <a href="dashboard.html" class="nav-item active">
-                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
                     <span class="nav-text">Dashboard</span>
                 </a>
-                
                 <a href="transactions.html" class="nav-item">
-                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8M9 2H15C15.5523 2 16 2.44772 16 3V5C16 5.55228 15.5523 6 15 6H9C8.44772 6 8 5.55228 8 5V3C8 2.44772 8.44772 2 9 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
                     <span class="nav-text">Transactions</span>
                 </a>
-                
                 <a href="#" class="nav-item" id="logoutBtn">
-                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9M16 17L21 12M21 12L16 7M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
                     <span class="nav-text">Logout</span>
                 </a>
             </nav>
@@ -67,194 +56,19 @@
             </div>
         </aside>
         
-        <!-- Mobile Header -->
-        <header class="mobile-header">
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <div class="logo-section">
-                <div class="logo">
-                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="48" height="48" rx="12" fill="#1E40AF"/>
-                        <path d="M14 34V14H19V29H29V34H14Z" fill="white"/>
-                        <circle cx="32" cy="20" r="4" fill="#3B82F6"/>
-                    </svg>
-                </div>
-                <h1 class="logo-text">Lius</h1>
-            </div>
-            <div style="width: 40px;"></div>
-        </header>
-        
         <!-- Main Content -->
         <main class="main-content">
-            <div class="page-header">
-                <div>
-                    <h1 class="page-title">Dashboard</h1>
-                    <p class="page-subtitle">Welcome back, <span id="dashboardUserName">User</span></p>
-                </div>
-                <button class="btn-primary" id="addTransactionBtn">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <span class="btn-text">Add Transaction</span>
-                </button>
-            </div>
-            
-            <!-- Summary Cards -->
-            <div class="summary-grid">
-                <div class="summary-card balance-card">
-                    <div class="card-header">
-                        <div class="card-icon-wrapper blue">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2V22M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <span class="card-label">Total Balance</span>
-                    </div>
-                    <div class="card-value" id="totalBalance">$0.00</div>
-                    <div class="card-footer">
-                        <span class="trend-indicator positive" id="balanceTrend">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 12V4M8 4L4 8M8 4L12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            0%
-                        </span>
-                        <span class="card-footer-text">vs last month</span>
-                    </div>
-                </div>
-                
-                <div class="summary-card income-card">
-                    <div class="card-header">
-                        <div class="card-icon-wrapper green">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M12 5L7 10M12 5L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <span class="card-label">Income</span>
-                    </div>
-                    <div class="card-value" id="totalIncome">$0.00</div>
-                    <div class="card-footer">
-                        <span class="card-footer-text">This month</span>
-                    </div>
-                </div>
-                
-                <div class="summary-card expense-card">
-                    <div class="card-header">
-                        <div class="card-icon-wrapper red">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 19V5M12 19L7 14M12 19L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <span class="card-label">Expenses</span>
-                    </div>
-                    <div class="card-value" id="totalExpenses">$0.00</div>
-                    <div class="card-footer">
-                        <span class="card-footer-text">This month</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recent Transactions -->
-            <div class="card">
-                <div class="card-header-section">
-                    <h2 class="card-title">Recent Transactions</h2>
-                    <a href="transactions.html" class="link">View all</a>
-                </div>
-                <div class="transactions-list" id="recentTransactions">
-                    <div class="empty-state">
-                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                            <circle cx="32" cy="32" r="32" fill="#F3F4F6"/>
-                            <path d="M32 20V44M20 32H44" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                        <p>No transactions yet</p>
-                        <button class="btn-secondary" onclick="document.getElementById('addTransactionBtn').click()">Add your first transaction</button>
-                    </div>
-                </div>
-            </div>
+            <h1>Welcome, <span id="dashboardUserName">User</span></h1>
+            <p>This is your dashboard.</p>
         </main>
-    </div>
-    
-    <!-- Add Transaction Modal -->
-    <div class="modal" id="addTransactionModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Add Transaction</h3>
-                <button class="modal-close" id="closeModalBtn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-            <form id="transactionForm" class="modal-form">
-                <div class="form-group">
-                    <label class="form-label">Type</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="type" value="income" checked>
-                            <span class="radio-custom"></span>
-                            <span>Income</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="type" value="expense">
-                            <span class="radio-custom"></span>
-                            <span>Expense</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="amount" class="form-label">Amount</label>
-                    <input 
-                        type="number" 
-                        id="amount" 
-                        class="form-input" 
-                        placeholder="0.00"
-                        step="0.01"
-                        required
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="description" class="form-label">Description</label>
-                    <input 
-                        type="text" 
-                        id="description" 
-                        class="form-input" 
-                        placeholder="What was this for?"
-                        required
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="category" class="form-label">Category</label>
-                    <select id="category" class="form-input" required>
-                        <option value="">Select a category</option>
-                        <option value="salary">Salary</option>
-                        <option value="freelance">Freelance</option>
-                        <option value="investment">Investment</option>
-                        <option value="food">Food & Dining</option>
-                        <option value="transport">Transportation</option>
-                        <option value="shopping">Shopping</option>
-                        <option value="bills">Bills & Utilities</option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="health">Health</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
-                    <button type="submit" class="btn-primary">Add Transaction</button>
-                </div>
-            </form>
-        </div>
     </div>
     
     <div id="toast" class="toast"></div>
     
-    <script type="module" src="js/firebase.js"></script>
+    <!-- REMOVE Firebase -->
+    <!-- <script type="module" src="js/firebase.js"></script> -->
+
+    <!-- LocalStorage dashboard script -->
     <script type="module" src="js/dashboard.js"></script>
 </body>
 </html>
