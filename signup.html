@@ -28,6 +28,7 @@
                     <h2 class="auth-title">Create your account</h2>
                     <p class="auth-subtitle">Start managing your finances smarter</p>
                     
+                    <!-- SIGNUP FORM -->
                     <form id="signupForm" class="auth-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Full Name</label>
@@ -73,7 +74,7 @@
                     </form>
                     
                     <div class="auth-footer">
-                        <p>Already have an account? <a href="login.html" class="auth-link">Sign in</a></p>
+                        <p>Already have an account? <a href="index.html" class="auth-link">Sign in</a></p>
                     </div>
                 </div>
             </div>
@@ -111,9 +112,13 @@
         </div>
     </div>
     
+    <!-- TOAST NOTIFICATION -->
     <div id="toast" class="toast"></div>
     
-    <script type="module" src="js/firebase.js"></script>
+    <!-- REMOVE Firebase script -->
+    <!-- <script type="module" src="js/firebase.js"></script> -->
+
+    <!-- INCLUDE LOCAL STORAGE AUTH JS -->
     <script type="module" src="js/auth.js"></script>
 </body>
 </html>
